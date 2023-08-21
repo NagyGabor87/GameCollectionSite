@@ -10,7 +10,7 @@ class App extends Component {
             <div className="App">
                 <Router>
                     <Routes>
-                        < Route path="/" element={<HangmanGame/>}/>
+                        < Route path="/hangman" element={<HangmanGame/>}/>
                     </Routes>
                 </Router>
             </div>
