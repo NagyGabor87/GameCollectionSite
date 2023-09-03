@@ -164,7 +164,7 @@ class HangmanGame extends PureComponent {
                 }
 
                 this.setState({
-                    gamestate: status
+                    gameState: status
                 });
             })
             .catch(error => {
