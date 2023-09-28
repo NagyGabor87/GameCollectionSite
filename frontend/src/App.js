@@ -6,6 +6,8 @@ import {BrowserRouter as Router, Routes, Route}
 import HangmanGame from "./components/HangmanComponents/HangmanGame";
 import HomePage from "./components/MainComponents/HomePage";
 import BootstrapNavbar from "./components/MainComponents/BootstrapNavbar";
+import LoginPage from "./components/MainComponents/LoginPage";
+import RegisterPage from "./components/MainComponents/RegisterPage";
 
 class App extends Component {
     render() {
@@ -16,6 +18,8 @@ class App extends Component {
                     <Routes>
                         <Route path="/" element={<HomePage/>}/>
                         <Route path="/hangman" element={<HangmanGame/>}/>
+                        <Route path="/login" element={<LoginPage/>}/>
+                        <Route path="/register" element={<RegisterPage/>}/>
                     </Routes>
                 </Router>
             </div>

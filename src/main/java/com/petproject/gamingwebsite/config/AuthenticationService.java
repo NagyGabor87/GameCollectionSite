@@ -9,7 +9,9 @@ import com.petproject.gamingwebsite.token.Token;
 import com.petproject.gamingwebsite.token.TokenType;
 import com.petproject.gamingwebsite.user.Role;
 import com.petproject.gamingwebsite.user.User;
+import io.jsonwebtoken.Jwts;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpHeaders;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -56,6 +58,13 @@ public class AuthenticationService {
                 .token(jwtToken)
                 .build();
     }
+
+    public String getUserNameByToken(HttpHeaders headers) {
+        String token = headers.get("Authorization").get(0);
+        String jwt = token.replace("Bearer", "");
+        return jwtService.extractUsername(jwt);
+    }
+
 
     private void revokeAllUserTokens(User user) {
         List<Token> validUserTokens = tokenRepository.findAllValidTokensByUser(user.getId());

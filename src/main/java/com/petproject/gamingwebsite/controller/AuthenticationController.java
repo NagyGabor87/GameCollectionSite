@@ -5,12 +5,10 @@ import com.petproject.gamingwebsite.dto.AuthenticationResponse;
 import com.petproject.gamingwebsite.config.AuthenticationService;
 import com.petproject.gamingwebsite.dto.RegisterRequest;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
+import org.springframework.web.bind.annotation.*;
+@CrossOrigin(origins = "http://localhost:8080")
 @RestController
 @RequestMapping("/auth")
 @RequiredArgsConstructor
@@ -24,6 +22,11 @@ public class AuthenticationController {
     @PostMapping("/authenticate")
     public ResponseEntity<AuthenticationResponse> authenticate(@RequestBody AuthenticationRequest request) {
         return ResponseEntity.ok(service.authenticate(request));
+    }
+    @GetMapping("/user")
+    public ResponseEntity<String> getUsername(@RequestHeader HttpHeaders header) {
+        String username = service.getUserNameByToken(header);
+        return ResponseEntity.ok().body(username);
     }
 
 }
