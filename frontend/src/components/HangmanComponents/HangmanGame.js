@@ -197,7 +197,7 @@ class HangmanGame extends PureComponent {
                 gamestate={this.state.gameState}
                 newgamehandler={this.newGameClickHandler}
             >
-                <h1>Hangman</h1>
+                <h1 className="cyber-font">Hangman</h1>
                 <WrongLetter parts={this.state.parts} />
                 <GuessableBuilder word={this.state.word} />
                 {this.state.isLoading ? (

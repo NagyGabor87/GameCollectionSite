@@ -1,18 +1,19 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Cynatar", sans-serif;
+  font-family: "Batman", sans-serif;
   font-size: xxx-large;
   color: #05d9e8;
   background-color: #01012b;
 }
 
-.brand {
-  font-size: 80px;
-  color: #05d9e8;
-}
 
 @font-face {
   font-family: "Cynatar", sans-serif;
   src: local('Cynatar'), url('./Cynatar.otf')format('opentype');
+}
+
+@font-face {
+  font-family: "Batman", sans-serif;
+  src: local('Batman'), url('./batman.ttf')format('truetype');
 }

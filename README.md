@@ -1,12 +1,12 @@
-# gaming-website
-Website for multiple games using Spring Boot for backend, React as frontend
+# Game Collection Site
+Website for multiple retro games to try out and play. 
+This project was created by using Spring Boot as backend, React as frontend
 
 ## Table of Contents
 * [General Info](#general-information)
 * [Technologies Used](#technologies-used)
 * [Features](#features)
 * [Setup](#setup)
-* [Project Status](#project-status)
 * [Room for Improvement](#room-for-improvement)
 * [Contact](#contact)
 
@@ -28,8 +28,10 @@ This project has been created as a pet project to practice and improve my knowle
 
 ## Features
 
-Cyberpunk-style frontend look to make the website look accurate for games.
-Working Hangman game with keyboard and figure
+Cyberpunk-style frontend which enhance the retro effect for the games.
+Currently working games :
+- Classic Hangman (with keyboard that works by either clicking on it, or pressing the corresponding key)
+
 
 ## Setup
 
@@ -66,10 +68,6 @@ If you run the project from an IDE like IntelliJ:
 Open the project folder, in the run configurations , hit the green right arrow next to ChatApplication
 to start Spring boot.
 You need to do the same npm start / npm install in the terminal just as in the console start.
-
-
-## Project Status
-Still in Progress. I still want to implement some features in the future.
 
 ## Room for Improvement
 
