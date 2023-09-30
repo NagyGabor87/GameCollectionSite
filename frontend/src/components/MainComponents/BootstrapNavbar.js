@@ -59,7 +59,7 @@ const BootstrapNavbar = () => {
   return (
       <Navbar className={`header ${show && "header-down"}`} data-bs-theme="dark">
         <Container fluid>
-            <Navbar.Brand className="brand">Gaming Site</Navbar.Brand>
+            <Navbar.Brand className="brand cyber-font">Gaming Site</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ps-xl-5">

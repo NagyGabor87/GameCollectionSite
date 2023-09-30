@@ -4,9 +4,11 @@
 .brand {
     font-size: 80px;
     color: #05d9e8;
+    pointer-events: none;
 }
-.brand:hover {
-    color: #d1f7ff;
+
+.cyber-font {
+    font-family: "Cynatar", sans-serif;
 }
 
 .cyber-button {
