@@ -1,0 +1,29 @@
+.scene-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.block {
+    stroke-width: 1px;
+    stroke: #d1f7ff;
+}
+
+.paddle {
+    fill: #05d9e8;
+}
+
+.ball {
+    fill: #d1f7ff;
+    background-color: #05d9e8;
+}
+
+.level {
+    font-weight: bold;
+    fill: #ff2a6d;
+}
+
+.life {
+    fill: #05d9e8;
+}

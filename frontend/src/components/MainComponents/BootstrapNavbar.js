@@ -65,6 +65,7 @@ const BootstrapNavbar = () => {
                 <Nav className="ps-xl-5">
                     <Nav.Link href="/" className="nav-item">Home</Nav.Link>
                     <Nav.Link href="/hangman" className="nav-item">Hangman</Nav.Link>
+                    <Nav.Link href="/breakout" className="nav-item">Breakout</Nav.Link>
                 </Nav>
                 {!logged ? (
                 <Nav className="ps-xl-5 ms-auto">
