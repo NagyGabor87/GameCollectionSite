@@ -3,6 +3,8 @@ import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import React, {useEffect, useState} from "react";
 import {useNavigate} from "react-router-dom";
+import {Dropdown, DropdownButton, NavDropdown} from "react-bootstrap";
+import DropdownMenu from "react-bootstrap/DropdownMenu";
 
 const BootstrapNavbar = () => {
     const [show, setShow] = useState(true);
@@ -64,16 +66,20 @@ const BootstrapNavbar = () => {
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="ps-xl-5">
                     <Nav.Link href="/" className="nav-item">Home</Nav.Link>
-                    <Nav.Link href="/hangman" className="nav-item">Hangman</Nav.Link>
-                    <Nav.Link href="/breakout" className="nav-item">Breakout</Nav.Link>
                 </Nav>
                 {!logged ? (
-                <Nav className="ps-xl-5 ms-auto">
-                    <Nav.Link href="/login" className="nav-item">Login</Nav.Link>
-                    <Nav.Link href="/register" className="nav-item">Register</Nav.Link>
-                </Nav>
+                    <Nav className="ms-auto">
+                        <Nav.Link href="/login" className="nav-item">Login</Nav.Link>
+                        <Nav.Link href="/register" className="nav-item">Register</Nav.Link>
+                    </Nav>
                     ) : (
-                 <Nav className="ps-xl-5 ms-auto">
+                 <Nav className="ps-xl-5 me-auto">
+                     <Nav>
+                         <NavDropdown title="Games">
+                             <NavDropdown.Item href="/hangman">Hangman</NavDropdown.Item>
+                             <NavDropdown.Item href="/breakout">Breakout</NavDropdown.Item>
+                         </NavDropdown>
+                     </Nav>
                      <Navbar.Text className="nav-text">Logged in as: {user}</Navbar.Text>
                      <Nav.Link  onClick={logout} className="nav-item">Logout</Nav.Link>
                  </Nav>

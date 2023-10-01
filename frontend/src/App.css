@@ -217,6 +217,24 @@
     transform: translate(-50%, -50%);
     font-size: 100px;
 }
+.dropdown-toggle {
+    color: #05d9e8;
+}
+
+.dropdown-item {
+    color: #05d9e8;
+    background-color: #01012b;
+    font-size: 30px;
+}
+
+.dropdown:hover>.dropdown-menu {
+    z-index: 1000;
+    position: absolute;
+}
+
+.navbar {
+    z-index: 999;
+}
 
 .nav-item {
     margin: 20px;
@@ -224,13 +242,14 @@
     font-size: 45px;
 }
 
+
 .nav-item:hover {
     color : #d1f7ff;
 }
 .nav-text {
     color : #d1f7ff;
-    margin : 20px;
-    font-size: 45px;
+    margin : 22px;
+    font-size: 40px;
 }
 
 .textInput {
@@ -245,7 +264,7 @@
 
 .textInfo {
     color: #ff2a6d;
-    font-size: 35px;
+    font-size: 20px;
 }
 
 ::placeholder {
